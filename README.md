@@ -4,7 +4,6 @@ analytics-proxy-bot
 ## Get Started
 - Run `npm i` 
 - Provide the following environment variables:
-# - `FACEBOOK_PAGE_ID`
  - `FACEBOOK_ACCESS_TOKEN`
  - `FACEBOOK_VERIFY_TOKEN`
  - `DASHBOT_ACCESS_TOKEN`
