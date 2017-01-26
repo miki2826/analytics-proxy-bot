@@ -20,6 +20,10 @@ app.use('/_health', (req, res) => {
     res.sendStatus(200);
 });
 
+app.use('/status', (req, res) => {
+    res.sendStatus(200);
+});
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error('Not Found');
@@ -34,8 +38,7 @@ app.use((err, req, res, next) => {
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
     // render the error page
-    res.status(err.status || 500);
-    res.render('error');
+    res.sendStatus(err.status || 500);
 });
 
 module.exports = app;
